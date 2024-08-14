@@ -1,0 +1,66 @@
+{
+  "scripts": {
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "npm run startServer --prefix backend",
+    "start:frontend": "npm start --prefix frontend",
+    "lint": "eslint './backend/src/**/*.{js,jsx,ts,tsx}' './frontend/src/**/*.{js,jsx,ts,tsx}'",
+    "lint:fix": "eslint './backend/src/**/*.{js,jsx,ts,tsx}' './frontend/src/**/*.{js,jsx,ts,tsx}' --fix"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.8.0",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "concurrently": "^6.0.0",
+    "eslint": "^9.8.0",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.35.0",
+    "globals": "^15.9.0",
+    "prettier": "^3.3.3",
+    "typescript-eslint": "^8.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+    ],
+    "plugins": [
+      "@typescript-eslint",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "printWidth": 80,
+          "trailingComma": "es5",
+          "semi": true,
+          "jsxSingleQuote": true,
+          "singleQuote": true,
+          "useTabs": true,
+          "endOfLine": "auto",
+          "max-len": [
+            "error",
+            {
+              "code": 80
+            }
+          ],
+          "importOrder": [
+            "^react(.*)$",
+            "<THIRD_PARTY_MODULES>",
+            "./types",
+            "^[.](?!.*.(scss|css)$).*$",
+            "(.*).(scss|css)$"
+          ],
+          "importOrderSeparation": true,
+          "importOrderSortSpecifiers": true
+        }
+      ],
+      "@typescript-eslint/no-namespace": "off",
+      "no-duplicate-imports": "error"
+    }
+  }
+}

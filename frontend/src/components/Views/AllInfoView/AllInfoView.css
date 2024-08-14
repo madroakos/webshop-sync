@@ -1,0 +1,58 @@
+.gridView {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 320px));
+    grid-gap: 5rem;
+    justify-items: center;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+
+.secondItemInFlex {
+    flex-grow: 1;
+}
+
+.indicatorCircles {
+    width: 1rem;
+}
+
+.firstItemInFlex {
+    display: flex;
+    flex-shrink: 0;
+    gap: 2rem;
+    flex-direction: column;
+    padding: 2rem;
+    justify-self: end;
+}
+
+.outerGridView {
+    display: grid;
+    grid-template-columns: max-content 3fr;
+}
+
+.uploadForm {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    height: 4rem;
+}
+
+.fileUploadButton {
+    cursor: pointer;
+    width: 200px;
+    align-content: center;
+    font-size: 1.6rem;
+    height: 100%;
+    padding: 0 1rem;
+    background-color: white;
+    border-radius: 20px 0 0 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.uploadSubmitButton {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    height: 100%;
+    font-size: 1.6rem;
+}

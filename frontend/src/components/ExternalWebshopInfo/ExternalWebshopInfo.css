@@ -1,0 +1,7 @@
+#externalwebshop > ul {
+    margin: 0;
+}
+
+#externalwebshop > ul > li {
+    margin-bottom: 1.5rem;
+}
